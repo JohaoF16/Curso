@@ -32,6 +32,8 @@ public class Curso {
     }
 
     public void setEstudiantesEncimaPromedio() {
+        //la comparación no debe ser con la variable estudiantes
+        //se debe comparar con la variable de clase promedio
         int estudiantes = 0;
         for (int i = 0; i < notas.length; i++) {
             if (notas[i] > estudiantes) {
