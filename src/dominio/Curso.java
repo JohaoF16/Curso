@@ -35,14 +35,20 @@ public class Curso {
         //la comparación no debe ser con la variable estudiantes
         //se debe comparar con la variable de clase promedio
         int estudiantes = 0;
+        double promedio = 0;
+        double suma = 0;
+        for (int i = 0; i < 12; i++) {
+            suma += notas[i];
+        }
+        promedio = suma / 12;
+    
         for (int i = 0; i < notas.length; i++) {
-            if (notas[i] > estudiantes) {
-                estudiantes = (int) notas[i];
+            if (notas[i] > promedio) {
+                estudiantes++;
             }
         }
         this.estudiantesEncimaPromedio = estudiantes;
     }
-
     public double getPromedio() {
         return this.promedio;
     }
